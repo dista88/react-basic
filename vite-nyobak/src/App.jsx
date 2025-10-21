@@ -7,6 +7,7 @@ import Greet from "./components/Greet";
 import Header from "./components/Header";
 import MainContent from "./components/MainContent";
 import Footer from "./components/Footer";
+import ProductInfo from "./components/ProductInfo";
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
       <ChatMsg message="hello world" sender="robot" /> */}
       {/* <Todo /> */}
       {/* <Test /> */}
-      <Header />
+      {/* <Header /> */}
       <MainContent />
-      <Greet />
-      <Footer />
+      {/* <Footer />  */}
+      {/* <Greet />
+      <ProductInfo /> */}
     </>
   );
 }
