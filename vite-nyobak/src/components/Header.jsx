@@ -1,16 +1,19 @@
 import React from "react";
+import logo from "../assets/Images/logo.png";
+import { menu } from "../data/menuData";
+import MenuItem from "./MenuItem";
 
-function Header() {
+const Header = () => {
   return (
-    <header>
-      <h1>Welcome to My Website</h1>
-      <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
+    <div>
+      <img src={logo} className="w-20 object-cover md:w-[115px]" />
+      <ul>
+        {menu.map((item) => (
+          <MenuItem name={item.name} Icon={item.icon} />
+        ))}
+      </ul>
+    </div>
   );
-}
+};
 
 export default Header;
