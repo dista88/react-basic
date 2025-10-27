@@ -33,3 +33,5 @@ export const menu = [
     icon: HiTv,
   },
 ];
+
+export const mobileMenuIcon = { name: "", icon: HiDotsVertical };
