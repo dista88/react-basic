@@ -15,7 +15,7 @@ const Header = () => {
     <nav className="flex justify-between items-center gap-8">
       <div className="flex gap-8 items-center">
         <img src={logo} className="w-20 object-cover md:w-[115px]" />
-        <div className="md:hidden flex gap-5">
+        <div className="md:hidden flex gap-5 relative">
           {menu.slice(0, 2).map((item) => (
             <MenuItem name={item.name} Icon={item.icon} key={item.name} />
           ))}
@@ -27,7 +27,7 @@ const Header = () => {
             />
           </div>
           {isModalOpen && (
-            <div className="absolute mt-3 right-0  p-3 bg-[#121212] border border-gray-700  px-5 py-4">
+            <div className="absolute top-full mt-3 right-0 p-3 bg-[#121212] border shadow-xl border-gray-700  px-5 py-4 z-50 flex flex-col items-start space-y-2 rounded-lg">
               {restOfMenu.map((item) => (
                 <div onClick={toggleModal} className="w-full" key={item.name}>
                   <MenuItem name={item.name} Icon={item.icon} />
